@@ -14,9 +14,11 @@ COPY db.properties /db.properties
 COPY config.sh /config.sh
 COPY init.sh /init.sh
 COPY init-database.sql /init-database.sql
+COPY food.sql /food.sql
 
 RUN chmod +x /*.sh
-RUN mkdir 
+# RUN mkdir -p $TOMCAT_WEBAPPS/food/ 
+
 # CMD sh /start.sh
 # ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
 # CMD ["/start.sh"]
